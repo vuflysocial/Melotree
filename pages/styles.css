@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(10,10,10);
-    color: rgb(240,240,240);
+    background-color: #000026;
+    color: #000000;
     display: flex;
     align-items: center;
     flex-direction: column;

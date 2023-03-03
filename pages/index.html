@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melo-Dome</title>
+	<style>
+		body {
+			background-color: #000026;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		.btn {
+			background-color: darkorange;
+            border-radius: 20px;
+			border: none;
+			color: #fff;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 10px;
+			cursor: pointer;
+		}
+
+		.btn:hover {
+			background-color: #ff8c00;
+		}
+
+		.menu-btn {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			background-color: darkorange;
+            border-radius: 20px;
+			border: none;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		.menu {
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 0;
+			background-color: #000026;
+			overflow-x: hidden;
+			padding-top: 60px;
+			transition: 0.5s;
+			z-index: 1;
+		}
+
+		.menu a {
+			display: block;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 20px;
+			text-decoration: none;
+			transition: 0.3s;
+		}
+
+        .logo {
+            color: #fff;
+        }
+
+    
+		.menu a:hover {
+			background-color: #ff8c00;
+		}
+
+		.menu-btn-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background-color: darkorange;
+			border: none;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.menu-btn-close:hover {
+			background-color: #ff8c00;
+		}
+
+		.menu.show {
+			width: 250px;
+		}
+	</style>
+</head>
+<body>
+	<button class="menu-btn" onclick="openMenu()">☰</button>
+
+	<div class="menu" id="menu">
+		<button class="menu-btn-close" onclick="closeMenu()">×</button>
+		<a href="https://meloinu.netlify.app/">Melo Inu</a>
+		<a href="https://t.me/meloinucanto">Telegram</a>
+		<a href="https://twitter.com/meloinu">Twitter</a>
+		<a href="https://melo-inu.gitbook.io/whitepaper/">Whitepaper</a>
+		<a href="#">...</a>
+		<a href="#">...</a>
+	</div>
+
+	<div class="container">
+        <h1 class="logo">Welcome To The MeloDome</h1>
+        <h5 style="color: #ffffff">.</h5>
+		<a href="form/form.html" class="btn">Become An Admin</a>
+		<a href="https://meloai.netlify.app/dall-e" class="btn">Generate Ai Images & Use MeloGPT</a>
+		<a href="#" class="btn">...</a>
+	</div>
+
+	<script>
+        function openMenu() {
+            document.getElementById("menu").classList.add("show");
+            document.getElementById("overlay").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+    
+        function closeMenu() {
+            document.getElementById("menu").classList.remove("show");
+            document.getElementById("overlay").style.display = "none";
+            document.body.style.overflow = "visible";
+        }
+    </script>
+    
